@@ -4,7 +4,7 @@ import ForgotPassword from "../pages/auth/ForgotPassword";
 
 import Dashboard from "../pages/admin/Dashboard";
 import Products from "../pages/admin/Products";
-import AddProduct from "../pages/admin/AddProduct";
+import UpdateBarang from "../pages/admin/UpdateBarang";
 const authRoutes = [
   { path: "/auth/signin", component: Signin },
   { path: "/auth/signup", component: Signup },
@@ -14,6 +14,6 @@ const authRoutes = [
 const adminRoutes = [
   { path: "/admin/dashboard", component: Dashboard },
   { path: "/admin/products", component: Products },
-  { path: "/admin/add-products", component: AddProduct },
+  { path: "/admin/updateBarang", component: UpdateBarang },
 ];
 export { authRoutes, adminRoutes };

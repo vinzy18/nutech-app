@@ -11,12 +11,12 @@ const DropdownAction = (MenuRef, ToggleRef) => {
     }
   });
 };
-const Dropdown = (props) => {
+const DropdownNat = (props) => {
   const toggleRef = useRef();
   const menuRef = useRef();
   DropdownAction(menuRef, toggleRef);
   return (
-    <div className="dropdown">
+    <div className="dropdowns">
       <button
         className={`dropdown-toggle ${
           props.icon ? "toggle-icon" : "toggle-btn"
@@ -51,4 +51,4 @@ const Dropdown = (props) => {
   );
 };
 
-export default Dropdown;
+export default DropdownNat;

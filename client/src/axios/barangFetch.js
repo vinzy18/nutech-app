@@ -19,6 +19,20 @@ const getBarang = async (callback) => {
   }
 };
 
+const getBarangById = async (id, callback) => {
+  try {
+    const result = await axios({
+      method: "GET",
+      url: `${URL}/showbyid/${id}`,
+    });
+
+    console.log(id);
+    callback(result.data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const createBarang = async (barang) => {
   try {
     await axios({
@@ -27,7 +41,6 @@ const createBarang = async (barang) => {
       data: barang,
       headers: { access_token: token },
     });
-    Swal.fire(`Barang berhasil ditambahkan`, "Success");
 
     // console.log(result.data);
   } catch (error) {
@@ -39,7 +52,7 @@ const updateBarang = async (id, barang) => {
   try {
     await axios({
       method: "PUT",
-      url: `${URL}/edit/${id}`,
+      url: `${URL}/update/${id}`,
       data: barang,
       headers: { access_token: token },
     });
@@ -72,7 +85,9 @@ const deleteBarang = async (id, barang) => {
           "Terhapus!",
           `${barang.nama_barang} berhasil dihapus`,
           "Success"
-        );
+        ).then(() => {
+          window.location.reload();
+        });
       }
     });
   } catch (error) {
@@ -80,4 +95,4 @@ const deleteBarang = async (id, barang) => {
   }
 };
 
-export { getBarang, createBarang, updateBarang, deleteBarang };
+export { getBarang, getBarangById, createBarang, updateBarang, deleteBarang };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Decoreleft from "../../assets/img/decore-left.png";
 import Decoreright from "../../assets/img/decore-right.png";
 import { getBarang, deleteBarang } from "../../axios/barangFetch";
@@ -43,20 +44,20 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-6">
+        <Link to="/admin/products" className="col-lg-6">
           <div className="card-widget mb-2">
             <div className="widget-flex">
               <div className="widget-icon">
                 <i className="bx bx-package"></i>
               </div>
               <div className="card-widget-body">
-                <h1 className="widget-count">10</h1>
+                <h1 className="widget-count">{barang.length}</h1>
                 <p className="widget-name">Products</p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col-lg-6">
+        </Link>
+        <Link to="#" className="col-lg-6">
           <div className="card-widget mb-2">
             <div className="widget-flex">
               <div className="widget-icon">
@@ -68,7 +69,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Link>
 
         <div className="col-lg-6"></div>
       </div>

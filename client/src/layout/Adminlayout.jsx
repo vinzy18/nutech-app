@@ -6,7 +6,7 @@ import Header from "../components/Header";
 const Adminlayout = ({ children }) => {
   return (
     <div className="admin-layout">
-      <Header />
+      {/* <Header /> */}
       <Route render={(props) => <Sidebar {...props} />} />
       <div className="admin-content">
         <div className="admin-wrapper">{children}</div>

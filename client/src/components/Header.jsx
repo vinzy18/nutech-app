@@ -1,10 +1,10 @@
 import React from "react";
-import Dropdown from "./Dropdown";
+import DropdownNat from "./Dropdown";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="admin-header">
-      <Dropdown
+      <DropdownNat
         icon={"bx bx-bell"}
         menuClass="dropdown-menu-notifications"
         menu={
@@ -50,25 +50,9 @@ const Header = () => {
         }
       />
 
-      <Dropdown
-        avatar={"http://placeimg.com/100/100/people"}
-        menu={
-          <>
-            <li className="dropdown-list">
-              <Link to="/admin/dashboard" className="dropdown-link">
-                <i className="bx bx-user dropdown-link-icon"></i>
-                Profile
-              </Link>
-            </li>
-            <li className="dropdown-list">
-              <Link to="/admin/dashboard" className="dropdown-link">
-                <i className="bx bx-power-off dropdown-link-icon"></i>
-                Logout
-              </Link>
-            </li>
-          </>
-        }
-      />
+      <img src="" alt="" />
+
+      <DropdownNat avatar={"http://via.placeholder.com/100x100"} />
     </div>
   );
 };

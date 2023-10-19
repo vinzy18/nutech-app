@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({
-  foto_barang,
-  nama_barang,
-  harga_jual,
-  stok,
-  deleteAction,
-}) => {
+const ProductCard = ({ nama_barang, harga_jual, stok, deleteAction }) => {
   return (
     <div className="card-product">
       <div className="card-product-header">
@@ -18,7 +12,7 @@ const ProductCard = ({
           menu={
             <>
               <li className="dropdown-list">
-                <Link to="/admin/product/edit/:id" className="dropdown-link">
+                <Link to="/admin/updateBarang" className="dropdown-link">
                   <i className="bx bx-edit dropdown-link-icon"></i>
                   Edit
                 </Link>

@@ -5,6 +5,7 @@ barangRoute.get("/", (req, res) => {
   res.send("Hallo");
 });
 barangRoute.get("/show", BarangController.getBarang);
+barangRoute.get("/showbyid/:id", BarangController.getBarangById);
 barangRoute.post("/create", BarangController.createBarang);
 barangRoute.put("/update/:id", BarangController.updateBarang);
 barangRoute.delete("/delete/:id", BarangController.deleteBarang);

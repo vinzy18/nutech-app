@@ -630,7 +630,7 @@ progress {
 .admin-sidebar-item:hover .admin-sidebar-name {
   transform: translateX(5px);
 }
-.dropdown {
+.dropdowns {
   position: relative;
   z-index: 100;
 }
@@ -880,6 +880,10 @@ progress {
   display: grid;
   place-content: center;
   font-size: 1.15rem;
+}
+.btn-add {
+  background-color: #5960e6;
+  font-size: 0.9rem;
 }
 .grid-box {
   display: grid;

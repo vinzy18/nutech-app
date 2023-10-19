@@ -1,5 +1,5 @@
 import React from "react";
-import SCLOGO from "../assets/img/sc-logo.png";
+// import SCLOGO from "../assets/img/sc-logo.png";
 import sidebar_routes from "../assets/json/sidebar_routes.json";
 import { Link } from "react-router-dom";
 
@@ -22,8 +22,7 @@ const Sidebar = (props) => {
     <div className="admin-sidebar">
       <div className="admin-sidebar-header">
         <div className="admin-sidebar-logo">
-          <img src={SCLOGO} alt="" className="img-logo" />
-          <h1 className="logo-name">Simple Coding</h1>
+          <h1 className="logo-name">Nutech App</h1>
         </div>
       </div>
       <div className="admin-sidebar-menu">

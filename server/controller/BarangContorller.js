@@ -11,6 +11,18 @@ class BarangController {
       res.status(400).json(err);
     }
   }
+  static async getBarangById(req, res) {
+    try {
+      const id = +req.params.id;
+      let item = await barang.findByPk(id);
+
+      item
+        ? res.status(200).json(item)
+        : res.status(404).json({ message: `Item tidak ditemukan` });
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  }
   static async createBarang(req, res) {
     try {
       const { nama_barang, foto_barang, harga_jual, harga_beli, stok } =
